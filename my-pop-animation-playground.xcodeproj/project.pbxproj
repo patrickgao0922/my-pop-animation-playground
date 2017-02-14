@@ -12,6 +12,7 @@
 		9688E2C81E53C9F300010FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9688E2C61E53C9F300010FC3 /* Main.storyboard */; };
 		9688E2CA1E53C9F300010FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9688E2C91E53C9F300010FC3 /* Assets.xcassets */; };
 		9688E2CD1E53C9F300010FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9688E2CB1E53C9F300010FC3 /* LaunchScreen.storyboard */; };
+		A642F936158381015E3C93B3 /* Pods_my_pop_animation_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D940BCE9CD6149646372EE38 /* Pods_my_pop_animation_playground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		9688E2C91E53C9F300010FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9688E2CC1E53C9F300010FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9688E2CE1E53C9F300010FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69539F5AEDDF0DEF5314B25 /* Pods-my-pop-animation-playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-pop-animation-playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-my-pop-animation-playground/Pods-my-pop-animation-playground.debug.xcconfig"; sourceTree = "<group>"; };
+		D940BCE9CD6149646372EE38 /* Pods_my_pop_animation_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_pop_animation_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB00523D926507330EA6634E /* Pods-my-pop-animation-playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-pop-animation-playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-my-pop-animation-playground/Pods-my-pop-animation-playground.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642F936158381015E3C93B3 /* Pods_my_pop_animation_playground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3182997B6C326426DBDAF198 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D940BCE9CD6149646372EE38 /* Pods_my_pop_animation_playground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9688E2B61E53C9F300010FC3 = {
 			isa = PBXGroup;
 			children = (
 				9688E2C11E53C9F300010FC3 /* my-pop-animation-playground */,
 				9688E2C01E53C9F300010FC3 /* Products */,
+				A737B40E633A5821F2505CDF /* Pods */,
+				3182997B6C326426DBDAF198 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "my-pop-animation-playground";
 			sourceTree = "<group>";
 		};
+		A737B40E633A5821F2505CDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69539F5AEDDF0DEF5314B25 /* Pods-my-pop-animation-playground.debug.xcconfig */,
+				FB00523D926507330EA6634E /* Pods-my-pop-animation-playground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9688E2D11E53C9F300010FC3 /* Build configuration list for PBXNativeTarget "my-pop-animation-playground" */;
 			buildPhases = (
+				09C76E3B85C055E72CCCF695 /* [CP] Check Pods Manifest.lock */,
 				9688E2BB1E53C9F300010FC3 /* Sources */,
 				9688E2BC1E53C9F300010FC3 /* Frameworks */,
 				9688E2BD1E53C9F300010FC3 /* Resources */,
+				526453AD88E0849F247CDC3A /* [CP] Embed Pods Frameworks */,
+				DC1A6FD010242882E81AB24C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09C76E3B85C055E72CCCF695 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		526453AD88E0849F247CDC3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-my-pop-animation-playground/Pods-my-pop-animation-playground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1A6FD010242882E81AB24C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-my-pop-animation-playground/Pods-my-pop-animation-playground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9688E2BB1E53C9F300010FC3 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		9688E2D21E53C9F300010FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69539F5AEDDF0DEF5314B25 /* Pods-my-pop-animation-playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
@@ -270,6 +346,7 @@
 		};
 		9688E2D31E53C9F300010FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB00523D926507330EA6634E /* Pods-my-pop-animation-playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;

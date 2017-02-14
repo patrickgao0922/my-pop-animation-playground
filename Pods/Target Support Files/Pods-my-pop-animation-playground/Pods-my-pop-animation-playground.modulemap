@@ -1,0 +1,6 @@
+framework module Pods_my_pop_animation_playground {
+  umbrella header "Pods-my-pop-animation-playground-umbrella.h"
+
+  export *
+  module * { export * }
+}
